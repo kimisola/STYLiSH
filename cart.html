@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" href="./css/cart.css" />
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154991574-1');
+    </script>
+
+</head>
+<body>
+    <header>
+        <!-- 手機板menu -->
+        <div class="mainhead">
+            <img src="images/search.png" id="search" onclick="mobileSearch()" />
+            <input type="text" id="mobileSearchBlock" style="display: none" />
+            <img src="images/logo.png" id="mainlogophone" onclick="location.href='index.html';"> 
+        </div>    
+        
+        <div class="menu">
+            <a class="menulist" onclick="location.href='index.html?category=women';">女裝 </a><span>| </span>
+            <a class="menulist" onclick="location.href='index.html?category=men';">男裝 </a><span>| </span>
+            <a class="menulist" onclick="location.href='index.html?category=accessories';">配件</a>
+        </div>
+        
+        <!-- 網頁板menu -->
+        <div class="secondhead">    
+            <img src="images/logo.png" id="mainlogo" onclick="location.href='index.html';"> 
+            <div class="secondmenu">
+                <a class="secondmenulist" onclick="location.href='index.html?category=women';">女裝</a><span>| </span>
+                <a class="secondmenulist" onclick="location.href='index.html?category=men';">男裝</a><span>| </span>
+                <a class="secondmenulist" onclick="location.href='index.html?category=accessories';">配件</a>
+            </div>
+            <div class="secondmenuicon">
+                <input type="text" id="searchblock" />
+                <a id="carticon" onmouseover="" onmouseout="">
+                    <div class="cartItem" id="cartItem"> 0 </div>
+                </a>
+                <img src="./images/member.png" id="membericon" onmouseover="" onmouseout="">
+            </div>
+        </div>        
+    </header>
+
+    <div class="headline"></div>
+
+<!-- 背景讀取 -->
+    <div class="loading">
+        <div id="load">
+            <div>H</div>
+            <div>S</div>
+            <div>I</div>
+            <div>L</div>
+            <div>Y</div>
+            <div>T</div>
+            <div>S</div>
+        </div>
+    </div>
+
+    <div class="container" >
+      <div class="mainCart" id="mainCart">
+        <div class="title">
+            <div class="product_name">&nbsp;</div>
+            <div>數量</div>
+            <div>單價</div>
+            <div>小計</div>
+            <div>&nbsp;</div>
+        </div>
+        <div class="cartList" id="cartList">
+
+
+<!-- 以下是要刪掉的code -->
+ <!-- <div class="row" id="row">
+    <div class="box">
+        <div class="box1">
+            <div class="div_img">
+                <img src="./images/product_test_main.PNG">
+            </div>
+            <div class="details">
+            前開衩扭結洋裝<br>
+            201807201824<br>
+            <br>
+            顏色：白<br>
+            尺寸：M
+            </div>
+        </div>
+
+        <div class="mobileTrashcan">
+            <img src="images/cart-remove.png">
+        </div>
+    </div> -->
+
+    <!-- 網頁版 -->
+    <!-- <div class="web">
+        <div class="qty" id="qty"> 
+            <select id="Number1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="price"> NT.799 </div>
+        <div class="subtotal"> NT.799 </div>
+        <div class="trashcan" id="trashcan">
+            <img src="images/cart-remove.png">
+        </div>
+    </div> -->
+    
+    <!-- 手機版 -->
+    <!-- <div class="mobile">
+        <div calss="mobileItem">
+            <div>數量</div>
+            <div class="qty" id="qty"> 
+                <select id="mobileNumber1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mobileItem">
+            <div>單價</div>
+            <div class="price"> NT.799 </div>
+        </div>
+
+        <div class="mobileItem">
+            <div>小計</div>
+            <div class="subtotal"> NT.799 </div>
+        </div>
+    </div>
+</div>  -->
+            
+        </div>
+
+        <div class="country">
+            <p class="trans1">配送國家
+            <select>
+                <option value="台灣或離島">台灣或離島</option>
+            </select> </p>
+            <p class="trans2">付款方式
+            <select>
+                <option value="信用卡付款">信用卡付款</option>
+            </select> </p>
+        </div>
+
+        <div class="notice">
+            ※ 提醒您：<br>
+            ● 請填寫正確收件人資訊，避免包裹配送不達<br>
+            ● 請填寫正確收件人姓名 ( 與證件相符 )，避免無法領取
+        </div>
+
+        <div class="horizonLine">收件人資料</div>
+        <div class="customerData">
+            <div class="data">
+                <div class="thing">收件人姓名</div>
+                <input type="text" class="textInput" value="哈姆太郎">
+            </div>
+            <div class="data">
+                <div class="thing">Email</div>
+                <input type="text" class="textInput" value="hamu@taro">
+            </div>
+            <div class="data">
+                <div class="thing">手機號碼</div>
+                <input type="text" class="textInput" value="0912345678">
+            </div>
+            <div class="data">
+                <div class="thing">收件地址</div>
+                <input type="text" class="textInput" value="市政府school">
+            </div>
+            <div class="data">
+                <div class="thing">配送時間</div>
+                <input type="radio" value="morning" id="radio1" name="preferTime" onclick="getPreferTime(this.value)">08:00 - 12:00
+                <input type="radio" value="afternoon" id="radio2" name="preferTime" onclick="getPreferTime(this.value)">14:00 - 18:00
+                <input type="radio" value="anytime" id="radio3" name="preferTime" onclick="getPreferTime(this.value)">不指定
+            </div>
+        </div>
+
+        <div class="horizonLine">付款資料</div>
+        <div class="payment">
+            <div class="data">
+                <div class="thing">信用卡號碼</div>
+                <div class="tpfield" class="tappay-field-focus" id="card-number"></div>
+            </div>
+            <div class="data">
+                <div class="thing">有效期限</div>
+                <div class="tpfield" class="tappay-field-focus" id="card-expiration-date"></div>
+            </div>
+            <div class="data">
+                <div class="thing" >安全碼</div>
+                <div class="tpfield" class="tappay-field-focus" id="card-ccv"></div>
+            </div>
+        </div>
+        
+        <div class="horizonLine"></div>
+
+        <div class="confirm">
+            <div class="confirmItem">
+                <div class="confirmName">總金額</div>
+                <div class="confirmPrice1"></div>
+            </div>
+            <div class="confirmItem">
+                <div class="confirmName">運費</div>
+                <div class="confirmPrice2">NT. 60</div>
+            </div>
+            <div class="confirmItem">
+            <div class="shortLine"></div>
+            </div>
+            <div class="confirmItem">
+                <div class="confirmName">應付金額</div>
+                <div class="confirmPrice3"></div>
+            </div>
+            <div class="confirmItem">
+                <div class="goToPay" id="goToPay">確 認 付 款</div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mainlabel">
+        <div class="label"> 
+            <a id="carticon-mobile">
+                <div class="cartItem" id="cartItem-mobile"> 0 </div>
+            </a>
+            <a href="" class="cartmobile">購物車</a>
+            <p class="labelline">  |  </p>  
+            <img src="images/member-mobile.png" id="member_mobile_icon"> 
+            <a href="" class="membermobile" id="member_mobile">會員</a>
+        </div>
+    </div>
+    
+    <footer>
+    <div class="mainfooter">
+        <div class="wrapper">
+            <a href="" class="footerlist">關於 Stylish</a><span></span>
+            <a href="" class="footerlist">服務條款</a><span></span>
+            <a href="" class="footerlist">隱私條款</a><span></span>
+            <a href="" class="footerlist">聯絡我們</a><span></span>
+            <a href="" class="footerlist">FAQ</a>
+        </div>
+        <div class="website">
+            <img src="images/line.png" class="webicon">
+            <img src="images/twitter.png" class="webicon">
+            <img src="images/facebook.png" class="webicon">
+        </div>
+           
+        <div class="copy">
+            <p>&copy; 2018. All rights reserved.</p>
+        </div>
+    </div>    
+    </footer>
+
+    <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/useful.js"></script>
+    
+   
+</body>
+</html>
+
+

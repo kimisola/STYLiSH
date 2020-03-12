@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <title>Stylish</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154991574-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154991574-1');
+    </script>
+
+	
+</head>
+
+<body>
+
+<header>
+<!-- 手機板menu -->
+    <div class="mainhead">
+        <img src="images/search.png" id="search" />
+        <input type="text" id="mobileSearchBlock" style="display: none" />
+        <img src="images/logo.png" id="mainlogophone" onclick="location.href='index.html';"> 
+    </div>    
+
+    <div class="menu">
+        <a class="menulist" onclick="location.href='index.html?category=women';">女裝 </a><span>| </span>
+        <a class="menulist" onclick="location.href='index.html?category=men';">男裝 </a><span>| </span>
+        <a class="menulist" onclick="location.href='index.html?category=accessories';">配件</a>
+    </div>
+
+<!-- 網頁板menu -->
+<div class="secondhead">    
+    <img src="images/logo.png" id="mainlogo" onclick="location.href='index.html';"> 
+    <div class="secondmenu">
+        <a class="secondmenulist" onclick="location.href='index.html?category=women';">女裝</a><span>| </span>
+        <a class="secondmenulist" onclick="location.href='index.html?category=men';">男裝</a><span>| </span>
+        <a class="secondmenulist" onclick="location.href='index.html?category=accessories';">配件</a>
+    </div>
+    <div class="secondmenuicon">
+        <input type="text" id="searchblock" />
+        <a id="carticon" onmouseover="" onmouseout="" onclick="location.href='cart.html';">
+            <div class="cartItem" id="cartItem"> 0 </div>
+        </a>
+        <img src="./images/member.png" id="membericon" onmouseover="" onmouseout="">
+    </div>
+
+</div>
+
+</header>
+
+    <div class="headline"></div>
+
+    <div class="slideshow-container" id="campaigns">
+    <!-- <div id="allVisual"> -->
+        <!-- <div id="slideShow">
+            <div class="mySlides" onclick="location.href='https://api.appworks-school.tw/?tag=%E8%A5%BF%E8%A3%9D';" style="background-image: url('./images/homeimg.PNG');">
+                <div class="story"b></div>
+            </div>
+        </div> -->
+
+        <div class="dots" id="dots">
+            <!-- <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span> -->
+        </div> 
+    <!-- </div> -->
+    </div>
+
+    <div class="items" id="items">
+    <!-- <div class="row">
+        <img src="https://fakeimg.pl/360x480/" class="item" >
+        <div class="color" >
+            <div class="productcolor"></div>
+    </div>
+
+        <div class="productdetail"></div>
+            <p class="productname" >厚實毛呢格子外套</p>
+            <p class="productprice" >ＴＷＤ. ２２００</p>
+    </div>-->
+       
+    </div>
+
+    <div class="mainlabel">
+        <div class="label"> 
+            <a id="carticon-mobile">
+                <div class="cartItem" id="cartItem-mobile" onclick="location.href='cart.html';"> 0 </div>
+            </a>
+            <a href="cart.html" class="cartmobile">購物車</a>
+            <p class="labelline">  |  </p>  
+            <img src="images/member-mobile.png" id="member_mobile_icon"> 
+            <a href="" class="membermobile" id="member_mobile">會員</a>
+        </div>
+    </div>
+    
+    <footer>
+
+    <div class="mainfooter">
+        <div class="wrapper">
+            <a href="" class="footerlist">關於 Stylish</a><span></span>
+            <a href="" class="footerlist">服務條款</a><span></span>
+            <a href="" class="footerlist">隱私條款</a><span></span>
+            <a href="" class="footerlist">聯絡我們</a><span></span>
+            <a href="" class="footerlist">FAQ</a>
+        </div>
+        <div class="website">
+            <img src="images/line.png" class="webicon">
+            <img src="images/twitter.png" class="webicon">
+            <img src="images/facebook.png" class="webicon">
+        </div>
+           
+        <div class="copy">
+            <p>&copy; 2018. All rights reserved.</p>
+        </div>
+    </div>
+       
+    </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/3.0.3/infinite-scroll.pkgd.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/useful.js"></script>
+
+
+    </body>
+
+</html>

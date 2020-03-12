@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="./css/product.css" />
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-154991574-1');
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <!-- 手機板menu -->
+        <div class="mainhead">
+            <img src="images/search.png" id="search" />
+            <input type="text" id="mobileSearchBlock" style="display: none" />
+            <img src="images/logo.png" id="mainlogophone" onclick="location.href='index.html';"> 
+        </div>    
+        
+        <div class="menu">
+            <a class="menulist" onclick="location.href='index.html?category=women';">女裝 </a><span>| </span>
+            <a class="menulist" onclick="location.href='index.html?category=men';">男裝 </a><span>| </span>
+            <a class="menulist" onclick="location.href='index.html?category=accessories';">配件</a>
+        </div>
+        
+        <!-- 網頁板menu -->
+        <div class="secondhead">    
+            <img src="images/logo.png" id="mainlogo" onclick="location.href='index.html';"> 
+            <div class="secondmenu">
+                <a class="secondmenulist" onclick="location.href='index.html?category=women';">女裝</a><span>| </span>
+                <a class="secondmenulist" onclick="location.href='index.html?category=men';">男裝</a><span>| </span>
+                <a class="secondmenulist" onclick="location.href='index.html?category=accessories';">配件</a>
+            </div>
+            <div class="secondmenuicon">
+                <input type="text" id="searchblock" />
+                <a id="carticon" onmouseover="" onmouseout="" >
+                    <div class="cartItem" id="cartItem"> 0 </div>
+                </a>
+                <img src="./images/member.png" id="membericon" onmouseover="" onmouseout="">
+            </div>
+        </div>        
+    </header>
+
+    <div class="headline"></div>
+
+    <div class="product_container">  <!--分三大區塊-->
+
+      <div class="containerTop" id="containerTop">
+        <!-- <img class="main_image" src="./images/product_test_main.PNG"/> -->
+
+        <div class="product" id="product">
+            <!-- <h3 class="title">前開衩扭結洋裝</h3>
+            <p class="id">03040047</p>
+
+            <div class="price">TWD.599</div> -->
+
+            <div class="variants">
+                <div class="color" id="colorDiv">
+                    <div>顏 色</div> 
+                    <span class="verticalLine"> | </span>
+                    <!-- <div class="color-box">  -->
+                        <!--<div class="color-code"> </div> -->
+                </div>
+                    
+                </div>
+                <div class="sizes" id="sizes">
+                    <div>尺 寸</div> 
+                    <span class="verticalLine"> | </span>
+                    <!-- <div class="size">S</div>
+                    <div class="size">M</div>
+                    <div class="size">L</div> -->
+                </div>
+                <div class="quantity" id="quantity">
+                    <div>數 量</div> 
+                    <span class="verticalLine"> | </span>
+                    
+                        <div class="quantityNum" id="quantityNum">
+                            <!-- <div class="quantityNumDe">－</div>
+                            <div class="quantityNumEl">1</div>
+                            <div class="quantityNumIn">＋</div> -->
+                        </div>
+                  
+                </div>
+
+                <div class="addToCart" >加 入 購 物 車</div>
+
+                <!-- <p class="note">*實品顏色依單品照為主</p>
+
+                <p class="texture">棉100%</p> -->
+                <!-- <p class="description">
+                厚薄：薄<br>
+                彈性：無
+                </p><br> -->
+
+                <!-- <p class="wash">清洗：手洗，溫水</p>
+                <p class="place">產地：中國</p> -->
+            </div>
+        </div> 
+    
+
+        <div class="detail" id="product_details">  <!--此處應該是有幾個描述/照片就render幾次?-->
+            <div class="detailSpan"> <span class="spanTitle">更多產品資訊</span> <hr class="horizonLine"> </div>
+            <p class="story"></p>
+            <!-- <img class="product_images" src="./images/product_test_01.PNG" /> -->
+
+        </div>
+    </div>
+
+    <div class="mainlabel">
+        <div class="label"> 
+            <a id="carticon-mobile">
+                <div class="cartItem" id="cartItem-mobile" > 0 </div>
+            </a>
+            <a href="cart.html" class="cartmobile">購物車</a>
+            <p class="labelline">  |  </p>  
+            <img src="images/member-mobile.png" id="member_mobile_icon"> 
+            <a href="" class="membermobile" id="member_mobile">會員</a>
+        </div>
+    </div>
+    
+    <footer>
+    <div class="mainfooter">
+        <div class="wrapper">
+            <a href="" class="footerlist">關於 Stylish</a><span></span>
+            <a href="" class="footerlist">服務條款</a><span></span>
+            <a href="" class="footerlist">隱私條款</a><span></span>
+            <a href="" class="footerlist">聯絡我們</a><span></span>
+            <a href="" class="footerlist">FAQ</a>
+        </div>
+        <div class="website">
+            <img src="images/line.png" class="webicon">
+            <img src="images/twitter.png" class="webicon">
+            <img src="images/facebook.png" class="webicon">
+        </div>
+           
+        <div class="copy">
+            <p>&copy; 2018. All rights reserved.</p>
+        </div>
+    </div>    
+    </footer>
+
+    <script src="./js/product.js"></script>
+    <script src="./js/useful.js"></script>
+</body>
+
+</html>
+
